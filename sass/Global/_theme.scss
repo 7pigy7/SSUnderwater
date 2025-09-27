@@ -1,7 +1,8 @@
-$color-primary: #3a00ff !default;
-$color-primary-alt: #6f6ffd !default;
-$color-secondary: #d42257 !default;
-$color-background: #d2fbf7 !default;
+$color-primary: #2ec4b6 !default;
+$color-primary-alt: #e9da68 !default;
+$color-secondary: #E18f8d !default;
+$color-background: #007ea7 !default;
+$color-text:black !default;
 
 $brand-colors: (
   primary: $color-primary,
@@ -10,7 +11,7 @@ $brand-colors: (
 ) !default;
 
 $color-body: scale-color(
-  $color-primary,
+  $color-text,
   $lightness: -30%,
   $saturation: -50%
 ) !default;
@@ -58,7 +59,7 @@ $font-sizes: (
   }
 
   --color-anchor: #{$link-color};
-  --font-family: "Baloo 2", sans-serif;
+  --font-family: "DynaPuff", system-ui;
   --font-weight-strong: #{$font-weight-strong};
 
   @each $key, $size in $font-sizes {
