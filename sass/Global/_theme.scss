@@ -1,12 +1,12 @@
 $color-primary: #2ec4b6 !default;
-$color-primary-alt: #e9da68 !default;
+$color-accent: #e9da68 !default;
 $color-secondary: #E18f8d !default;
 $color-background: #007ea7 !default;
 $color-text:black !default;
 
-
 $link-color: color(primary) !default;
 $border-radius: 8px !default;
+$padding: 5px !default;
 
 $font-weight-strong: 500 !default;
 $font-size-h1: 6rem !default;
@@ -25,7 +25,12 @@ $font-sizes: (
 
 // stylelint-disable
 :root {
-  --color-anchor: #{$link-color};
+  --color-primary: #{$color-primary};
+  --color-accent: #{$color-accent};
+  --color-secondary: #{$color-secondary};
+  --color-background: #{$color-background};
+  --color-text: #{$color-text};
+  --color-link: #{$link-color};
   --font-titles: "DynaPuff", system-ui;
   --font-text: "Montserrat Alternates", sans-serif;
   --font-weight-strong: #{$font-weight-strong};

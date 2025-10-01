@@ -1,0 +1,21 @@
+//@media for small and large screen
+
+//set breakpoint sizes variables
+$small-screen: 20em;
+$large-screen: 60em;
+
+//mixin for @media
+@mixin breakpoint($break) {
+    @if $break == small {
+        @media (max-width: $small-screen) {
+            @content;
+        }
+    }
+    @else if $break == large {
+        @media (max-width: $large-screen) {
+            @content;
+        }
+    }
+}
+
+//use mixin by coding: @include breakpoint(small) {} or @include breakpoint(large){}
