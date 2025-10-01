@@ -4,7 +4,7 @@ $color-secondary: #E18f8d !default;
 $color-background: #007ea7 !default;
 $color-text:black !default;
 
-$link-color: color(primary) !default;
+$link-color: $color-primary !default;
 $border-radius: 8px !default;
 $padding: 5px !default;
 
