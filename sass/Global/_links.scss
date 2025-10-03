@@ -1,11 +1,11 @@
 // css for all links
 .skip-link {
-    background-color: $color-primary-alt;
+    background-color: $color-accent;
     border-radius: 50%;
     text-align: center;
     color: $color-text;
     text-decoration: none;
-    padding: 1rem;
+    padding: $padding;
 }
 .skip-link:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
@@ -17,12 +17,12 @@
     text-align: center;
     color: $color-text;
     text-decoration: none;
-    padding: 1rem;
+    padding: $padding;
 }
 
 [class^="link-"]:hover {
     border-style: dotted;
-    border-color: $color-primary-alt;
+    border-color: $color-accent;
 }
 
 a {

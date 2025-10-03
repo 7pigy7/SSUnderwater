@@ -105,7 +105,7 @@ select {
   text-align: center;
   color: black;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .skip-link:hover {
@@ -118,7 +118,7 @@ select {
   text-align: center;
   color: black;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 [class^=link-]:hover {
@@ -128,5 +128,5 @@ select {
 
 a {
   text-decoration: none;
-  color: color(primary);
+  color: #2ec4b6;
 }
