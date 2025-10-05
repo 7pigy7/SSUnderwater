@@ -1,1 +1,51 @@
 // nav
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+
+    li {
+        padding: $padding;
+    }
+
+    li a {
+        padding: $padding;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: $font-size-h4;
+        font-weight: $font-weight-strong;
+        transition: 500ms;
+        border-radius: $border-radius;
+        background-color: $color-accent;
+        color: $color-text
+    }
+
+    li a:visited {
+        color: $color-background;
+    }
+
+    li a:hover {
+        font-size: $font-size-h3;
+        color: $color-text;
+        background-color: $color-primary;
+    }
+}
+
+@include breakpoint(computer) {
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li a {
+            font-size: $font-size-h3;
+        }
+
+        li a:hover {
+            font-size: $font-size-h3;
+        }
+    }
+}
