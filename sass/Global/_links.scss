@@ -5,10 +5,15 @@
     text-align: center;
     color: $color-text;
     text-decoration: none;
-    padding: $padding;
+    padding: 0.75rem;
 }
 .skip-link:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.link-github svg {
+    background-color: none;
+    max-height: 15px;
 }
 
 [class^="link-"] {
@@ -17,7 +22,7 @@
     text-align: center;
     color: $color-text;
     text-decoration: none;
-    padding: $padding;
+    padding: 0.75rem;
 }
 
 [class^="link-"]:hover {
@@ -27,5 +32,8 @@
 
 a {
     text-decoration: none;
-    color: $link-color;
+    color: $color-text;
+    background-color: #d1f1ff;
+    border-radius: $border-radius;
+    padding: $padding;
 }

@@ -19,16 +19,16 @@ nav ul {
   list-style-type: none;
 }
 nav ul li {
-  padding: 0.75rem;
+  padding: 0.3rem;
 }
 nav ul li a {
-  padding: 0.75rem;
+  padding: 0.3rem;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.35rem;
   font-weight: 500;
   transition: 500ms;
-  border-radius: 8px;
+  border-radius: 30px;
   background-color: #e9da68;
   color: black;
 }
@@ -155,6 +155,11 @@ select {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 
+.link-github svg {
+  background-color: none;
+  max-height: 15px;
+}
+
 [class^=link-] {
   background-color: #E18f8d;
   border-radius: 50%;
@@ -171,5 +176,8 @@ select {
 
 a {
   text-decoration: none;
-  color: #2ec4b6;
+  color: black;
+  background-color: #d1f1ff;
+  border-radius: 30px;
+  padding: 0.3rem;
 }
