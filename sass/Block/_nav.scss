@@ -2,6 +2,9 @@
 
 nav {
     text-align: center;
+    border-top: 7px dotted $color-primary;
+    border-bottom: 7px dotted $color-primary;
+    margin: $margin;
 }
 
 nav ul {
