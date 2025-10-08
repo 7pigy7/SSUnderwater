@@ -4,6 +4,7 @@
   --color-accent: #e9da68;
   --color-secondary: #E18f8d;
   --color-background: #007ea7;
+  --color-bubbles: #e7feff;
   --color-text: black;
   --color-link: #2ec4b6;
   --font-titles: "DynaPuff", system-ui;
@@ -27,18 +28,12 @@ nav ul li a {
   cursor: pointer;
   font-size: 1.35rem;
   font-weight: 500;
-  transition: 500ms;
   border-radius: 30px;
   background-color: #e9da68;
   color: black;
 }
 nav ul li a:visited {
   color: #007ea7;
-}
-nav ul li a:hover {
-  font-size: 2rem;
-  color: black;
-  background-color: #2ec4b6;
 }
 
 @media (min-width: 31em) {
@@ -49,9 +44,11 @@ nav ul li a:hover {
   }
   nav ul li a {
     font-size: 2rem;
+    transition: 1s;
   }
   nav ul li a:hover {
-    font-size: 2rem;
+    color: black;
+    background-color: #2ec4b6;
   }
 }
 body {
@@ -177,7 +174,7 @@ select {
 a {
   text-decoration: none;
   color: black;
-  background-color: #d1f1ff;
+  background-color: #e7feff;
   border-radius: 30px;
   padding: 0.3rem;
 }

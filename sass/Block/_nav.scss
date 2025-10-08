@@ -17,7 +17,6 @@ nav ul {
         cursor: pointer;
         font-size: $font-size-h4;
         font-weight: $font-weight-strong;
-        transition: 500ms;
         border-radius: $border-radius;
         background-color: $color-accent;
         color: $color-text
@@ -25,12 +24,6 @@ nav ul {
 
     li a:visited {
         color: $color-background;
-    }
-
-    li a:hover {
-        font-size: $font-size-h3;
-        color: $color-text;
-        background-color: $color-primary;
     }
 }
 
@@ -42,10 +35,12 @@ nav ul {
 
         li a {
             font-size: $font-size-h3;
+            transition: 1s;
         }
 
         li a:hover {
-            font-size: $font-size-h3;
+            color: $color-text;
+            background-color: $color-primary;
         }
     }
 }

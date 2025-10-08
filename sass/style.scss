@@ -1,10 +1,5 @@
 @import "Utility/fonts";
-
-// You can modify the theme directly, or override some of the variables
-// Overrides just need placed prior to the theme import
-// For example:
-// $color-primary: #3a0;
-@import "Utility/logomark";
+@import "Utility/center";
 @import "Utility/media";
 @import "Global/theme";
 @import "Block/about";
@@ -19,5 +14,4 @@
 @import "Composition/reset";
 @import "Block/styles";
 @import "Global/links";
-@import "Global/typography";
 

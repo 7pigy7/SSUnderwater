@@ -3,6 +3,7 @@ $color-accent: #e9da68 !default;
 $color-secondary: #E18f8d !default;
 $color-background: #007ea7 !default;
 $color-text:black !default;
+$color-bubbles: #e7feff;
 
 $link-color: $color-primary !default;
 $border-radius: 30px !default;
@@ -21,6 +22,7 @@ $font-size-text: 1.15rem !default;
   --color-accent: #{$color-accent};
   --color-secondary: #{$color-secondary};
   --color-background: #{$color-background};
+  --color-bubbles: #{$color-bubbles};
   --color-text: #{$color-text};
   --color-link: #{$link-color};
   --font-titles: "DynaPuff", system-ui;
