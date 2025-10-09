@@ -51,9 +51,9 @@ header .container a {
             "title title title"
             "link secTitle creator";
     }
-/*
+
     header .container h1::before {
-        content: url('');
+        content: "🐳";
         display: inline-block;
         width: 13%;
         height: 50%;
@@ -63,7 +63,7 @@ header .container a {
     }
 
     header .container h1::after {
-        content: url('');
+        content: "🦈";
         display: inline-block;
         width: 13%;
         height: 50%;
@@ -71,7 +71,7 @@ header .container a {
         top: 2%;
         right: 2%;
     }
-*/
+
     header .container h1 {
         font-size: $font-size-h1;
         padding: $border-radius;

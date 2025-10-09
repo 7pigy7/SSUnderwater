@@ -1,1 +1,16 @@
 //#about
+
+
+#about .container ul li::before {
+    content: "🐠";
+}
+
+@include breakpoint(computer) {
+    #about .container:first-child h2::after {
+        content: "🐙";
+    }
+
+    #about .container:nth-child(2) h2::before {
+        content: "🦀";
+    }
+}
