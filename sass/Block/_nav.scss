@@ -2,13 +2,14 @@
 
 nav {
     text-align: center;
-    border-top: 7px dotted $color-primary;
-    border-bottom: 7px dotted $color-primary;
+    border-top: $border-circles;
+    border-bottom: $border-circles;
     margin: $margin;
 }
 
 nav ul {
     list-style-type: none;
+    padding: 0;
 
     li {
         padding: $padding;

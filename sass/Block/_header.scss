@@ -17,7 +17,7 @@ header {
 }
 
 header .container h1 {
-    border: 10px dotted $color-primary;
+    border: $border-circles;
     max-width: 70%;
     @include centered;
     padding: $padding;
