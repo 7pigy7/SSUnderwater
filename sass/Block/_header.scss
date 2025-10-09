@@ -53,7 +53,7 @@ header .container a {
     }
 
     header .container h1::before {
-        content: url('../../photos/fish1.jpg');
+        content: url('../../public/photos/fish1.jpg');
         display: inline-block;
         width: 13%;
         height: 50%;
@@ -63,7 +63,7 @@ header .container a {
     }
 
     header .container h1::after {
-        content: url('../../photos/clownFish.jpg');
+        content: url('../../public/photos/clownFish.jpg');
         display: inline-block;
         width: 13%;
         height: 50%;
