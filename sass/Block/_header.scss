@@ -41,6 +41,10 @@ header .container a {
 }
 
 @include breakpoint(computer) {
+    header {
+        position: relative;
+    }
+
     header .container {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas:
@@ -48,9 +52,30 @@ header .container a {
             "link secTitle creator";
     }
 
+    header .container h1::before {
+        content: url('../../photos/fish1.jpg');
+        display: inline-block;
+        width: 13%;
+        height: 50%;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+    }
+
+    header .container h1::after {
+        content: url('../../photos/clownFish.jpg');
+        display: inline-block;
+        width: 13%;
+        height: 50%;
+        position: absolute;
+        top: 2%;
+        right: 2%;
+    }
+
     header .container h1 {
         font-size: $font-size-h1;
         padding: $border-radius;
+        max-width: 100%;
     }
 
     header .container h2 {
