@@ -143,26 +143,27 @@ header .container a {
     grid-template-areas: "title title title" "link secTitle creator";
   }
 
-  header .container h1::before {
-    content: url("../../public/photos/fish1.jpg");
-    display: inline-block;
-    width: 13%;
-    height: 50%;
-    position: absolute;
-    top: 2%;
-    left: 2%;
-  }
+  /*
+      header .container h1::before {
+          content: url('');
+          display: inline-block;
+          width: 13%;
+          height: 50%;
+          position: absolute;
+          top: 2%;
+          left: 2%;
+      }
 
-  header .container h1::after {
-    content: url("../../public/photos/clownFish.jpg");
-    display: inline-block;
-    width: 13%;
-    height: 50%;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-  }
-
+      header .container h1::after {
+          content: url('');
+          display: inline-block;
+          width: 13%;
+          height: 50%;
+          position: absolute;
+          top: 2%;
+          right: 2%;
+      }
+  */
   header .container h1 {
     font-size: 6rem;
     padding: 30px;
