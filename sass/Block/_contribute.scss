@@ -1,1 +1,7 @@
 //#contribute
+#contribute .container:first-child{
+    text-align: right;
+}
+#contribute .container:nth-child(2){
+    text-align: left;
+}

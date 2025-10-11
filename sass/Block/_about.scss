@@ -1,5 +1,10 @@
 //#about
-
+#about .container:first-child{
+    text-align: left;
+}
+#about .container:nth-child(2){
+    text-align: right;
+}
 
 #about .container ul li::before {
     content: "🐠";

@@ -3,6 +3,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-text);
+  padding: $padding;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,6 +30,10 @@ p {
   font-size: $font-size-text;
 }
 
-ul {
-    list-style-type: none;
+ul{
+  list-style: none;
+}
+
+main {
+  padding: 5rem;
 }
