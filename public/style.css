@@ -13,14 +13,12 @@
   --font-weight-strong: 500;
 }
 
-#about .container:first-child {
-  text-align: left;
-}
+/*#about .container:first-child{
 
-#about .container:nth-child(2) {
-  text-align: right;
 }
+#about .container:nth-child(2){
 
+}*/
 #about .container ul li::before {
   content: "🐠";
 }
@@ -34,14 +32,12 @@
     content: "🦀";
   }
 }
-#contribute .container:first-child {
-  text-align: right;
-}
+/*#contribute .container:first-child{
 
-#contribute .container:nth-child(2) {
-  text-align: left;
 }
+#contribute .container:nth-child(2){
 
+}*/
 .page-footer {
   margin: 10px;
   border: 10px dotted #2ec4b6;
@@ -74,10 +70,12 @@
 
 .page-footer .container ul li:first-child {
   grid-area: twitter;
+  font-size: smaller;
 }
 
 .page-footer .container ul li:nth-child(2) {
   grid-area: github;
+  font-size: smaller;
 }
 
 .page-footer .container ul li:nth-child(3) {
@@ -120,7 +118,7 @@
     grid-area: contri;
   }
 
-  .page-footer .container ul li:nth-child(4) {
+  .page-footer .container ul li:nth-child(4), .page-footer .container ul li:first-child, .page-footer .container ul li:nth-child(2) {
     font-size: 1.15rem;
   }
 }
@@ -155,6 +153,10 @@ header .container h2 {
 
 header .container p {
   grid-area: creator;
+}
+
+header .container p a {
+  font-size: smaller;
 }
 
 header .container a {
@@ -209,6 +211,10 @@ header .container a {
 
   header .container a {
     justify-self: center;
+  }
+
+  header .container p a {
+    font-size: 1.15rem;
   }
 }
 nav {
@@ -288,8 +294,9 @@ ul {
   list-style: none;
 }
 
-main {
-  padding: 5rem;
+#main {
+  text-align: center;
+  margin: 10px;
 }
 
 /*

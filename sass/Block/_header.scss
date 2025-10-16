@@ -35,6 +35,10 @@ header .container p {
     grid-area: creator;
 }
 
+header .container p a {
+    font-size: smaller;
+}
+
 header .container a {
     grid-area: link;
     align-self: center;
@@ -89,5 +93,9 @@ header .container a {
 
     header .container a {
         justify-self: center;
+    }
+
+    header .container p a {
+        font-size: $font-size-text;
     }
 }
