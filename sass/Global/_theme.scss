@@ -1,7 +1,7 @@
 $color-primary: #2ec4b6 !default;
 $color-accent: #e9da68 !default;
 $color-secondary: #E18f8d !default;
-$color-background: #007ea7 !default;
+$color-background: repeating-linear-gradient(45deg,#56abc7, #007ea7 10%, #56abc7 20%)  !default;
 $color-text:black !default;
 $color-bubbles: #e7feff;
 $link-color: $color-primary !default;
