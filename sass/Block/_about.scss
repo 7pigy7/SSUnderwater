@@ -1,21 +1,47 @@
 //#about
-/*#about .container:first-child{
-    
+
+#about .container {
+    border-bottom: $border-circles;
+    margin-top: $margin;
 }
-#about .container:nth-child(2){
-    
-}*/
+
+#about .container:first-child blockquote {
+    background-color: $color-primary;
+    border: 5px dotted $color-secondary;
+    border-radius: $border-radius;
+}
 
 #about .container ul li::before {
     content: "🐠";
 }
 
+#about .container ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#about .container ul li {
+    background-color: $color-accent;
+    border-radius: $border-radius;
+    padding: $padding;
+    margin: 5px;
+}
+
 @include breakpoint(computer) {
-    #about .container:first-child h2::after {
+    #about .container:first-child h2::before {
         content: "🐙";
     }
 
-    #about .container:nth-child(2) h2::before {
+    #about .container:nth-child(2) h2::after {
         content: "🦀";
     }
+
+    /*#about .container:first-child{
+    
+}
+#about .container:nth-child(2){
+    
+}*/
 }

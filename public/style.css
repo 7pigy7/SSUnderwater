@@ -13,24 +13,50 @@
   --font-weight-strong: 500;
 }
 
-/*#about .container:first-child{
-
+#about .container {
+  border-bottom: 10px dotted #2ec4b6;
+  margin-top: 10px;
 }
-#about .container:nth-child(2){
 
-}*/
+#about .container:first-child blockquote {
+  background-color: #2ec4b6;
+  border: 5px dotted #E18f8d;
+  border-radius: 30px;
+}
+
 #about .container ul li::before {
   content: "🐠";
 }
 
+#about .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#about .container ul li {
+  background-color: #e9da68;
+  border-radius: 30px;
+  padding: 0.3rem;
+  margin: 5px;
+}
+
 @media (min-width: 31em) {
-  #about .container:first-child h2::after {
+  #about .container:first-child h2::before {
     content: "🐙";
   }
 
-  #about .container:nth-child(2) h2::before {
+  #about .container:nth-child(2) h2::after {
     content: "🦀";
   }
+
+  /*#about .container:first-child{
+
+  }
+  #about .container:nth-child(2){
+
+  }*/
 }
 /*#contribute .container:first-child{
 
@@ -56,8 +82,6 @@
 
 .page-footer .container ul {
   order: 1;
-  padding: 0;
-  margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "twitter rssfeed" "github subscribe";
@@ -225,7 +249,7 @@ nav {
 }
 
 nav ul {
-  padding: 0;
+  margin: 10px;
 }
 nav ul li {
   padding: 0.3rem;
@@ -292,6 +316,8 @@ p {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 #main {
