@@ -30,18 +30,63 @@
 }
 
 @include breakpoint(computer) {
+    #about .container:first-child {
+        position: relative;
+    }
+
     #about .container:first-child h2::before {
         content: "🐙";
+        display: inline-block;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        top: 35%;
+        left: 2%;
+        grid-area: pic;
     }
 
     #about .container:nth-child(2) h2::after {
         content: "🦀";
     }
 
-    /*#about .container:first-child{
+    #about .container:first-child {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "title ."
+            "pic para1"
+            ". para2"
+            ". quote"
+            ". para3";
+        justify-content: center;
+        align-items: center;
+        column-gap: $margin;
+    }
+
+    #about .container:first-child h2 {
+        grid-area: title;
+        background-color: $color-primary;
+        border: 5px dotted $color-secondary;
+        border-radius: $border-radius;
+    }
+
+    #about .container:first-child p:first-child {
+        grid-area: para1;
+    }
+
+    #about .container:first-child p:nth-child(2) {
+        grid-area: para2;
+    }
+
+    #about .container:first-child blockquote {
+        grid-area: quote;
+    }
+
+    #about .container:first-child p:nth-child(3) {
+        grid-area: para3;
+    }
+
+    #about .container:nth-child(2){
     
-}
-#about .container:nth-child(2){
-    
-}*/
+    }
 }
