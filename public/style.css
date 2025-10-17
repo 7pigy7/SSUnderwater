@@ -4,7 +4,7 @@
   --color-primary: #2ec4b6;
   --color-accent: #e9da68;
   --color-secondary: #E18f8d;
-  --color-background: #007ea7;
+  --color-background: repeating-linear-gradient(45deg, #56abc7, #007ea7 10%, #56abc7 20%);
   --color-bubbles: #e7feff;
   --color-text: black;
   --color-link: #2ec4b6;
@@ -364,7 +364,7 @@ nav ul li a {
   color: black;
 }
 nav ul li a:visited {
-  color: #007ea7;
+  color: repeating-linear-gradient(45deg, #56abc7, #007ea7 10%, #56abc7 20%);
 }
 
 @media (min-width: 31em) {
@@ -383,7 +383,7 @@ nav ul li a:visited {
   }
 }
 body {
-  background-color: var(--color-background);
+  background-image: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-text);
   padding: 0.3rem;
