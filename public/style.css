@@ -48,11 +48,32 @@
   }
 
   @keyframes octo {
-    from {
-      transform: translateX(0);
+    0% {
+      transform: translate(0, 0);
     }
-    to {
-      transform: translateX(100vw);
+    10% {
+      transform: translateY(-20%);
+    }
+    20% {
+      transform: translateY(-15%);
+    }
+    30% {
+      transform: translateY(-30%);
+    }
+    40% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(-30%);
+    }
+    70% {
+      transform: translateY(-10%);
+    }
+    80% {
+      transform: translateY(-40%);
+    }
+    100% {
+      transform: translate(0, 0);
     }
   }
   @keyframes crab {
@@ -73,7 +94,7 @@
   }
 
   #about .container:first-child h2:hover::after {
-    animation: octo 5s ease-in-out forwards;
+    animation: octo 5s linear infinite;
   }
 
   #about .container:nth-child(2) h2::before {
@@ -86,7 +107,7 @@
   }
 
   #about .container:nth-child(2) h2:hover::before {
-    animation: crab 5s ease-in 1;
+    animation: crab 5s ease-in-out 1;
   }
 
   #about .container:first-child {
@@ -156,6 +177,14 @@
   #about .container:nth-child(2) p:nth-child(6) {
     grid-area: p4;
   }
+
+  /*@keyframes swim {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-20%); }
+      50% { transform: translateX(5%); }
+      75% { transform: translateX(-10%);}
+      100% { transform: translateX(0); }
+  }*/
 }
 /*#contribute .container:first-child{
 
