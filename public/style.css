@@ -393,7 +393,7 @@ nav ul li a {
   color: black;
 }
 nav ul li a:visited {
-  color: repeating-linear-gradient(20deg, #56abc7, #007ea7 10%, #56abc7 20%);
+  color: #006994;
 }
 
 @media (min-width: 31em) {
@@ -534,7 +534,7 @@ select {
 }
 
 .link-github svg {
-  background-color: none;
+  background-color: transparent;
   max-height: 15px;
 }
 
