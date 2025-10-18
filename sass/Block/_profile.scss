@@ -1,1 +1,10 @@
 // profile card in corner
+.profile {
+    background-color: $color-primary;
+    border-radius: $border-radius;
+    border: 4px dotted $color-accent;
+    padding: $padding;
+    float: inline-end;
+    margin: 0px 10px;
+
+}
