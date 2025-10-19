@@ -20,7 +20,7 @@ body {
   padding: 0.3rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-family: var(--font-titles);
 }
 
@@ -540,14 +540,6 @@ body {
 img {
   display: block;
   max-width: 100%;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
