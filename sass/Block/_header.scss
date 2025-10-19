@@ -35,13 +35,13 @@ header .container p {
     grid-area: creator;
 }
 
-header .container p a {
-    font-size: smaller;
-}
-
 header .container a {
     grid-area: link;
     align-self: center;
+}
+
+header .container p a {
+    font-size: smaller;
 }
 
 @include breakpoint(computer) {

@@ -2,16 +2,15 @@
 @import "Utility/center";
 @import "Utility/media";
 @import "Global/theme";
-@import "Block/about";
-@import "Block/contribute";
-@import "Block/files";
-@import "Block/footer";
-@import "Block/guidelines";
+@import "Composition/layout";
+@import "Global/links";
 @import "Block/header";
 @import "Block/nav";
+@import "Block/about";
+@import "Block/guidelines";
+@import "Block/contribute";
+@import "Block/files";
 @import "Block/profile";
-@import "Composition/layout";
-@import "Composition/reset";
 @import "Block/styles";
-@import "Global/links";
-
+@import "Block/footer";
+@import "Composition/reset";

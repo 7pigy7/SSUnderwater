@@ -13,6 +13,230 @@
   --font-weight-strong: 500;
 }
 
+body {
+  background-image: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-text);
+  padding: 0.3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-titles);
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+p {
+  font-size: 1.15rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  text-align: center;
+  margin: 10px;
+}
+
+.skip-link {
+  background-color: #e9da68;
+  border-radius: 50%;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  padding: 0.75rem;
+}
+
+.skip-link:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+.link-github svg {
+  background-color: transparent;
+  max-height: 15px;
+}
+
+[class^=link-] {
+  background-color: #E18f8d;
+  border-radius: 50%;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  padding: 0.75rem;
+  display: inline-block;
+}
+
+[class^=link-]:hover {
+  border-style: dotted;
+  border-color: #e9da68;
+}
+
+.link-support {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background-color: #afeeee;
+  border-radius: 30px;
+  padding: 0.3rem;
+}
+
+header {
+  margin-top: 30px;
+}
+
+header .container {
+  text-align: center;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: " title title" " secTitle secTitle" " creator link";
+  column-gap: 10px;
+}
+
+header .container h1 {
+  border: 10px dotted #2ec4b6;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.3rem;
+  font-size: 4rem;
+  grid-area: title;
+}
+
+header .container h2 {
+  margin: 10px;
+  font-size: 1.75rem;
+  grid-area: secTitle;
+}
+
+header .container p {
+  grid-area: creator;
+}
+
+header .container a {
+  grid-area: link;
+  align-self: center;
+}
+
+header .container p a {
+  font-size: smaller;
+}
+
+@media (min-width: 31em) {
+  header {
+    position: relative;
+  }
+
+  header .container {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "title title title" "link secTitle creator";
+  }
+
+  header .container h1::before {
+    content: "🐳";
+    display: inline-block;
+    width: 13%;
+    height: 50%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+  }
+
+  header .container h1::after {
+    content: "🦈";
+    display: inline-block;
+    width: 13%;
+    height: 50%;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+
+  header .container h1 {
+    font-size: 6rem;
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  header .container h2 {
+    font-size: 2.25rem;
+  }
+
+  header .container p {
+    align-self: center;
+    justify-self: center;
+  }
+
+  header .container a {
+    justify-self: center;
+  }
+
+  header .container p a {
+    font-size: 1.15rem;
+  }
+}
+nav {
+  text-align: center;
+  border-top: 10px dotted #2ec4b6;
+  border-bottom: 10px dotted #2ec4b6;
+  margin: 10px;
+}
+
+nav ul {
+  margin: 10px;
+}
+nav ul li {
+  padding: 0.3rem;
+}
+nav ul li a {
+  padding: 0.3rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.35rem;
+  font-weight: 500;
+  border-radius: 30px;
+  background-color: #e9da68;
+  color: black;
+}
+nav ul li a:visited {
+  color: #006994;
+}
+
+@media (min-width: 31em) {
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li a {
+    font-size: 1.75rem;
+    transition: 1s;
+  }
+  nav ul li a:hover {
+    color: black;
+    background-color: #2ec4b6;
+  }
+}
 #about .container {
   border-bottom: 10px dotted #2ec4b6;
   margin-top: 40px;
@@ -192,6 +416,15 @@
 #contribute .container:nth-child(2){
 
 }*/
+.profile {
+  background-color: #2ec4b6;
+  border-radius: 30px;
+  border: 4px dotted #e9da68;
+  padding: 0.3rem;
+  float: inline-end;
+  margin: 0 10px;
+}
+
 .page-footer {
   margin: 10px;
   border: 10px dotted #2ec4b6;
@@ -274,194 +507,6 @@
     font-size: 1.15rem;
   }
 }
-header {
-  margin-top: 30px;
-}
-
-header .container {
-  text-align: center;
-  margin: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: " title title" " secTitle secTitle" " creator link";
-  column-gap: 10px;
-}
-
-header .container h1 {
-  border: 10px dotted #2ec4b6;
-  max-width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.3rem;
-  font-size: 4rem;
-  grid-area: title;
-}
-
-header .container h2 {
-  margin: 10px;
-  font-size: 1.75rem;
-  grid-area: secTitle;
-}
-
-header .container p {
-  grid-area: creator;
-}
-
-header .container p a {
-  font-size: smaller;
-}
-
-header .container a {
-  grid-area: link;
-  align-self: center;
-}
-
-@media (min-width: 31em) {
-  header {
-    position: relative;
-  }
-
-  header .container {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "title title title" "link secTitle creator";
-  }
-
-  header .container h1::before {
-    content: "🐳";
-    display: inline-block;
-    width: 13%;
-    height: 50%;
-    position: absolute;
-    top: 2%;
-    left: 2%;
-  }
-
-  header .container h1::after {
-    content: "🦈";
-    display: inline-block;
-    width: 13%;
-    height: 50%;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-  }
-
-  header .container h1 {
-    font-size: 6rem;
-    padding: 30px;
-    max-width: 100%;
-  }
-
-  header .container h2 {
-    font-size: 2.25rem;
-  }
-
-  header .container p {
-    align-self: center;
-    justify-self: center;
-  }
-
-  header .container a {
-    justify-self: center;
-  }
-
-  header .container p a {
-    font-size: 1.15rem;
-  }
-}
-nav {
-  text-align: center;
-  border-top: 10px dotted #2ec4b6;
-  border-bottom: 10px dotted #2ec4b6;
-  margin: 10px;
-}
-
-nav ul {
-  margin: 10px;
-}
-nav ul li {
-  padding: 0.3rem;
-}
-nav ul li a {
-  padding: 0.3rem;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1.35rem;
-  font-weight: 500;
-  border-radius: 30px;
-  background-color: #e9da68;
-  color: black;
-}
-nav ul li a:visited {
-  color: #006994;
-}
-
-@media (min-width: 31em) {
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  nav ul li a {
-    font-size: 1.75rem;
-    transition: 1s;
-  }
-  nav ul li a:hover {
-    color: black;
-    background-color: #2ec4b6;
-  }
-}
-.profile {
-  background-color: #2ec4b6;
-  border-radius: 30px;
-  border: 4px dotted #e9da68;
-  padding: 0.3rem;
-  float: inline-end;
-  margin: 0px 10px;
-}
-
-body {
-  background-image: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-text);
-  padding: 0.3rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-titles);
-}
-
-h1 {
-  font-size: 6rem;
-}
-
-h2 {
-  font-size: 2.25rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.35rem;
-}
-
-p {
-  font-size: 1.15rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#main {
-  text-align: center;
-  margin: 10px;
-}
-
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
@@ -474,13 +519,7 @@ ul {
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+body, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -493,7 +532,7 @@ body {
   min-height: 100vh;
   font-size: 100%;
   line-height: 1.5;
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizespeed;
   overflow-x: hidden;
 }
 
@@ -519,48 +558,4 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-.skip-link {
-  background-color: #e9da68;
-  border-radius: 50%;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  padding: 0.75rem;
-}
-
-.skip-link:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
-}
-
-.link-github svg {
-  background-color: transparent;
-  max-height: 15px;
-}
-
-[class^=link-] {
-  background-color: #E18f8d;
-  border-radius: 50%;
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  padding: 0.75rem;
-  display: inline-block;
-}
-
-[class^=link-]:hover {
-  border-style: dotted;
-  border-color: #e9da68;
-}
-
-.link-support {
-  display: inline-block;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  background-color: #afeeee;
-  border-radius: 30px;
-  padding: 0.3rem;
 }
