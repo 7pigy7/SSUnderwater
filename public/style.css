@@ -543,6 +543,10 @@ ol li {
     grid-area: ol;
   }
 }
+#files h3 {
+  float: inline-start;
+}
+
 .profile {
   background-color: #2ec4b6;
   border-radius: 30px;
