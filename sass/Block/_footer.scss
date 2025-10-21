@@ -59,6 +59,10 @@
     order: 4;
 }
 
+.link-twittercontact, .link-github, .link-rss, .link-support {
+    margin: 0;
+}
+
 @include breakpoint(computer) {
     .page-footer .container {
         display: grid;

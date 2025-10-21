@@ -1,13 +1,8 @@
 //#about
 
-#about .container {
-    border-bottom: $border-circles;
-    margin-top: $margin-top-bottom;
-}
-
 #about .container:first-child blockquote {
     background-color: $color-primary;
-    border: 5px dotted $color-accent;
+    border: $border-circles-accent;
     border-radius: $border-radius;
 }
 
@@ -34,7 +29,7 @@
         position: relative;
     }
 
-    @keyframes octo {
+    @keyframes swim {
         0% { transform: translate(0,0); }
         10% { transform: translateY(-20%); }
         20% { transform: translateY(-15%); }
@@ -65,7 +60,7 @@
     }
 
     #about .container:first-child h2:hover::after {
-        animation: octo 5s linear infinite;
+        animation: swim 5s linear infinite;
     }
 
     #about .container:nth-child(2) h2::before {
@@ -78,7 +73,7 @@
     }
 
     #about .container:nth-child(2) h2:hover::before {
-        animation: crab 5s ease-in-out 1;
+        animation: crab 10s ease-in-out 1;
     }
 
     #about .container:first-child {
@@ -93,12 +88,6 @@
         justify-content: center;
         align-items: center;
         column-gap: $margin;
-    }
-
-    #about .container h2 {
-        background-color: $color-accent;
-        border: 5px dotted $color-secondary;
-        border-radius: $border-radius;
     }
 
     #about .container:first-child h2 {
@@ -150,6 +139,10 @@
 
     #about .container:nth-child(2) ul {
         grid-area: cssList;
+        background-color: $color-primary;
+        border-radius: $border-radius;
+        border: $border-circles-accent;
+        padding: 25px;
     }
 
     #about .container:nth-child(2) p:nth-child(5) {
@@ -160,7 +153,7 @@
         grid-area: p4;
     }
 
-    /*@keyframes swim {
+    /*@keyframes sub {
         0% { transform: translateX(0); }
         25% { transform: translateX(-20%); }
         50% { transform: translateX(5%); }

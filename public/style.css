@@ -55,6 +55,19 @@ ul {
   margin: 10px;
 }
 
+#about .container, #guidelines .container, #contribute .container {
+  border-bottom: 10px dotted #2ec4b6;
+  margin-top: 40px;
+}
+
+@media (min-width: 31em) {
+  #about .container h2, #guidelines .container h2, #contribute .container h2, #contribute .container h3 {
+    background-color: #e9da68;
+    border: 4px dotted #E18f8d;
+    border-radius: 30px;
+    padding: 0.3rem;
+  }
+}
 .skip-link {
   background-color: #e9da68;
   border-radius: 50%;
@@ -81,6 +94,7 @@ ul {
   text-decoration: none;
   padding: 0.75rem;
   display: inline-block;
+  margin-bottom: 40px;
 }
 
 [class^=link-]:hover {
@@ -237,11 +251,6 @@ nav ul li a:visited {
     background-color: #2ec4b6;
   }
 }
-#about .container {
-  border-bottom: 10px dotted #2ec4b6;
-  margin-top: 40px;
-}
-
 #about .container:first-child blockquote {
   background-color: #2ec4b6;
   border: 5px dotted #e9da68;
@@ -271,7 +280,7 @@ nav ul li a:visited {
     position: relative;
   }
 
-  @keyframes octo {
+  @keyframes swim {
     0% {
       transform: translate(0, 0);
     }
@@ -318,7 +327,7 @@ nav ul li a:visited {
   }
 
   #about .container:first-child h2:hover::after {
-    animation: octo 5s linear infinite;
+    animation: swim 5s linear infinite;
   }
 
   #about .container:nth-child(2) h2::before {
@@ -331,7 +340,7 @@ nav ul li a:visited {
   }
 
   #about .container:nth-child(2) h2:hover::before {
-    animation: crab 5s ease-in-out 1;
+    animation: crab 10s ease-in-out 1;
   }
 
   #about .container:first-child {
@@ -341,12 +350,6 @@ nav ul li a:visited {
     justify-content: center;
     align-items: center;
     column-gap: 10px;
-  }
-
-  #about .container h2 {
-    background-color: #e9da68;
-    border: 5px dotted #E18f8d;
-    border-radius: 30px;
   }
 
   #about .container:first-child h2 {
@@ -392,6 +395,10 @@ nav ul li a:visited {
 
   #about .container:nth-child(2) ul {
     grid-area: cssList;
+    background-color: #2ec4b6;
+    border-radius: 30px;
+    border: 5px dotted #e9da68;
+    padding: 25px;
   }
 
   #about .container:nth-child(2) p:nth-child(5) {
@@ -402,7 +409,7 @@ nav ul li a:visited {
     grid-area: p4;
   }
 
-  /*@keyframes swim {
+  /*@keyframes sub {
       0% { transform: translateX(0); }
       25% { transform: translateX(-20%); }
       50% { transform: translateX(5%); }
@@ -410,12 +417,132 @@ nav ul li a:visited {
       100% { transform: translateX(0); }
   }*/
 }
-/*#contribute .container:first-child{
+@media (min-width: 31em) {
+  #guidelines .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "gTitle ." ". par1" "tldr ." ". par2" ". par3" "linkg par4";
+    position: relative;
+  }
 
+  #guidelines .container h2 {
+    grid-area: gTitle;
+  }
+
+  #guidelines .container h2::after {
+    content: "🐬";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    left: -28%;
+  }
+
+  #guidelines .container h2:hover::after {
+    animation: swim 5s linear infinite;
+  }
+
+  #guidelines .container p:nth-child(2) {
+    grid-area: par1;
+  }
+
+  #guidelines .container h3 {
+    grid-area: tldr;
+    margin-left: 80%;
+    background-color: #2ec4b6;
+    border: 5px dotted #e9da68;
+    border-radius: 30px;
+    padding: 0.3rem;
+  }
+
+  #guidelines .container p:nth-child(4) {
+    grid-area: par2;
+  }
+
+  #guidelines .container p:nth-child(5) {
+    grid-area: par3;
+  }
+
+  #guidelines .container p:nth-child(6) {
+    grid-area: par4;
+  }
+
+  .link-guidelines {
+    grid-area: linkg;
+  }
 }
-#contribute .container:nth-child(2){
+ol li {
+  margin: 10px;
+  text-align: left;
+}
 
-}*/
+@media (min-width: 31em) {
+  #contribute > .container:first-child {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: ". ctitle1" "parag1 ." "parag2 .";
+    position: relative;
+  }
+
+  #contribute .container:first-child h2 {
+    grid-area: ctitle1;
+  }
+
+  #contribute .container:first-child h2::before {
+    content: "🦑";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    right: -27%;
+  }
+
+  #contribute .container:first-child h2:hover::before {
+    animation: swim 5s linear infinite;
+  }
+
+  #contribute .container:first-child p:nth-child(2) {
+    grid-area: parag1;
+  }
+
+  #contribute .container:first-child p:nth-child(3) {
+    grid-area: parag2;
+  }
+
+  #contribute .container:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "ctitle2 ." ". ol";
+    position: relative;
+  }
+
+  #contribute .container:nth-child(2) h3 {
+    grid-area: ctitle2;
+  }
+
+  #contribute .container:nth-child(2) h3::after {
+    content: "🐡";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    left: -25%;
+  }
+
+  #contribute .container:nth-child(2) h3:hover::after {
+    animation: swim 5s linear infinite;
+  }
+
+  #contribute .container:nth-child(2) ol {
+    grid-area: ol;
+  }
+}
 .profile {
   background-color: #2ec4b6;
   border-radius: 30px;
@@ -478,6 +605,10 @@ nav ul li a:visited {
 
 .page-footer .container p:nth-child(4) {
   order: 4;
+}
+
+.link-twittercontact, .link-github, .link-rss, .link-support {
+  margin: 0;
 }
 
 @media (min-width: 31em) {

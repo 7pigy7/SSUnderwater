@@ -40,3 +40,17 @@ ul{
   text-align: center;
   margin: $margin;
 }
+
+#about .container, #guidelines .container, #contribute .container {
+    border-bottom: $border-circles;
+    margin-top: $margin-top-bottom;
+}
+
+@include breakpoint(computer) {
+  #about .container h2, #guidelines .container h2, #contribute .container h2, #contribute .container h3 {
+    background-color: $color-accent;
+    border: 4px dotted $color-secondary;
+    border-radius: $border-radius;
+    padding: $padding;
+  }
+}
