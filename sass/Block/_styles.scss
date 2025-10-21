@@ -1,2 +1,30 @@
 //.features and #styles
 
+#styles {  
+    padding: $padding;
+}
+
+#styles h2{
+    background-color: $color-accent;
+    border-radius: $border-radius;
+    border: 4px dotted $color-secondary;
+    margin: $margin;
+    float: inline-start;
+}
+
+.features{
+    display: flex;
+    justify-content: space-evenly;
+    margin: $margin;
+}
+
+.features li {
+    border: dotted 5px $color-accent;
+    margin: $margin;
+    padding: $padding;
+}
+
+.link-allstyles{
+    display: flex;
+    justify-content: space-evenly;
+}

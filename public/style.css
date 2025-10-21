@@ -544,7 +544,7 @@ ol li {
   }
 }
 #files h3 {
-  float: inline-start;
+  float: inline-end;
 }
 
 .profile {
@@ -553,7 +553,36 @@ ol li {
   border: 4px dotted #e9da68;
   padding: 0.3rem;
   float: inline-end;
-  margin: 0 10px;
+  margin: 10px;
+}
+
+#styles {
+  padding: 0.3rem;
+}
+
+#styles h2 {
+  background-color: #e9da68;
+  border-radius: 30px;
+  border: 4px dotted #E18f8d;
+  margin: 10px;
+  float: inline-start;
+}
+
+.features {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.features li {
+  border: dotted 5px #e9da68;
+  margin: 10px;
+  padding: 0.3rem;
+}
+
+.link-allstyles {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .page-footer {
