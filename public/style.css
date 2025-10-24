@@ -552,10 +552,14 @@ ol li {
   border-radius: 30px;
   border: 4px dotted #e9da68;
   padding: 0.3rem;
-  float: inline-end;
   margin: 10px;
 }
 
+@media (min-width: 31em) {
+  .profile {
+    float: inline-end;
+  }
+}
 #styles {
   padding: 0.3rem;
 }
@@ -565,7 +569,6 @@ ol li {
   border-radius: 30px;
   border: 4px dotted #E18f8d;
   margin: 10px;
-  float: inline-start;
 }
 
 .features {
@@ -583,8 +586,14 @@ ol li {
 .link-allstyles {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
+@media (min-width: 31em) {
+  #styles h2 {
+    float: inline-start;
+  }
+}
 .page-footer {
   margin: 10px;
   border: 10px dotted #2ec4b6;

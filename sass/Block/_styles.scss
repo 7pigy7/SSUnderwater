@@ -9,7 +9,7 @@
     border-radius: $border-radius;
     border: 4px dotted $color-secondary;
     margin: $margin;
-    float: inline-start;
+    
 }
 
 .features{
@@ -27,4 +27,11 @@
 .link-allstyles{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@include breakpoint(computer){
+    #styles h2 {
+        float: inline-start;
+    }
 }
