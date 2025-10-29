@@ -41,16 +41,18 @@ ul{
   margin: $margin;
 }
 
-#about .container, #guidelines .container, #contribute .container {
-    border-bottom: $border-circles;
-    margin-top: $margin-top-bottom;
+#about .container, #guidelines .container, #contribute .container:nth-child(2), #contribute #files .container {
+  border-block-end: $border-circles;
+  margin-block-start: $margin-top-bottom;
 }
 
-@include breakpoint(computer) {
-  #about .container h2, #guidelines .container h2, #contribute .container h2, #contribute .container h3 {
-    background-color: $color-accent;
-    border: 4px dotted $color-secondary;
-    border-radius: $border-radius;
-    padding: $padding;
-  }
+#contribute {
+  margin-block-start: $margin-top-bottom;
+}
+
+#about .container h2, #guidelines .container h2, #contribute .container h2, #contribute .container h3 {
+  background-color: $color-accent;
+  border: 4px dotted $color-secondary;
+  border-radius: $border-radius;
+  padding: $padding;
 }

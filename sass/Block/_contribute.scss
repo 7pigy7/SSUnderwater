@@ -1,8 +1,22 @@
 //#contribute
 
+ol {
+   @include quoteBox;
+}
+
+ol li::marker {
+    font-family: var(--font-titles);
+    font-size: $font-size-h3;
+    font-weight: $font-weight-strong;
+    color: $color-bubbles;
+}
+
 ol li {
+    font-family: var(--font-text);
+    color: $color-text;
     margin: $margin;
     text-align: left;
+    padding: $padding;
 }
 
 @include breakpoint(computer) {
@@ -28,12 +42,13 @@ ol li {
         position: absolute;
         width: 100%;
         top: 2%;
-        right: -27%;
+        right: -25%;
+        animation: swim 8s linear infinite;
     }
 
-    #contribute .container:first-child h2:hover::before {
-        animation: swim 5s linear infinite;
-    }
+    /*#contribute .container:first-child h2:hover::before {
+        animation: swim 8s linear infinite;
+    }*/
 
     #contribute .container:first-child p:nth-child(2) {
         grid-area: parag1;
@@ -58,20 +73,34 @@ ol li {
         grid-area: ctitle2;
     }
 
+    @keyframes scale {
+        0% { transform: scale(1); }
+        5% { transform: scale(1); }
+        25% { transform: scale(4); }
+        50% { transform: scale(1); }
+        75% { transform: scale(3); }
+        100% { transform: scale(1); }
+    }
+
     #contribute .container:nth-child(2) h3::after {
         content: "🐡";
         display: inline-block;
         position: absolute;
         width: 100%;
         top: 2%;
-        left: -25%;
+        left: -22%;
+        animation: scale 10s linear infinite;
     }
 
-    #contribute .container:nth-child(2) h3:hover::after {
-        animation: swim 5s linear infinite;
-    }
+    /*#contribute .container:nth-child(2) h3:hover::after {
+        animation: scale 5s linear infinite;
+    }*/
 
-    #contribute .container:nth-child(2) ol {
+    ol {
         grid-area: ol;
+    }
+
+    ol li::marker {
+        font-size: $font-size-h2;
     }
 }

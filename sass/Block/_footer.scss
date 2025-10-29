@@ -28,8 +28,8 @@
 }
 
 .page-footer .container ul li {
-    margin-top: $border-radius;
-    margin-bottom: $border-radius;
+    margin-block-start: $border-radius;
+    margin-block-end: $border-radius;
 }
 
 .page-footer .container ul li:first-child {

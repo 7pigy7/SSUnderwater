@@ -2,8 +2,8 @@
 
 nav {
     text-align: center;
-    border-top: $border-circles;
-    border-bottom: $border-circles;
+    border-block-start: $border-circles;
+    border-block-end: $border-circles;
     margin: $margin;
 }
 
