@@ -1,14 +1,16 @@
 //#about
 
 #about .container:first-child blockquote {
-    background-color: $color-primary;
-    border: $border-circles-accent;
-    border-radius: $border-radius;
+    @include quoteBox;
 }
 
-#about .container ul li::before {
-    content: "🐠";
+blockquote p {
+    padding: $padding;
 }
+
+/*#about .container ul li {
+    
+}*/
 
 #about .container ul {
     display: flex;
@@ -42,12 +44,9 @@
     }
 
     @keyframes crab {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-100vw);
-        }
+        0% { transform: translateX(0); }
+        50% { transform: translateX(-100vw); }
+        100% { transform: translateX(0); }
     }
 
     #about .container:first-child h2::after {
@@ -57,11 +56,12 @@
         width: 100%;
         top: 2%;
         left: -23%;
+        animation: swim 8s linear infinite;
     }
 
-    #about .container:first-child h2:hover::after {
+    /*#about .container:first-child h2:hover::after {
         animation: swim 5s linear infinite;
-    }
+    }*/
 
     #about .container:nth-child(2) h2::before {
         content: "🦀";
@@ -70,11 +70,12 @@
         width: 100%;
         top: 2%;
         right: 2%;
+        animation: crab 10s ease-in-out infinite;
     }
 
-    #about .container:nth-child(2) h2:hover::before {
+    /*#about .container:nth-child(2) h2:hover::before {
         animation: crab 10s ease-in-out 1;
-    }
+    }*/
 
     #about .container:first-child {
         display: grid;
@@ -139,9 +140,7 @@
 
     #about .container:nth-child(2) ul {
         grid-area: cssList;
-        background-color: $color-primary;
-        border-radius: $border-radius;
-        border: $border-circles-accent;
+        @include quoteBox;
         padding: 25px;
     }
 
@@ -152,12 +151,4 @@
     #about .container:nth-child(2) p:nth-child(6) {
         grid-area: p4;
     }
-
-    /*@keyframes sub {
-        0% { transform: translateX(0); }
-        25% { transform: translateX(-20%); }
-        50% { transform: translateX(5%); }
-        75% { transform: translateX(-10%);}
-        100% { transform: translateX(0); }
-    }*/
 }

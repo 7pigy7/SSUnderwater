@@ -55,19 +55,22 @@ ul {
   margin: 10px;
 }
 
-#about .container, #guidelines .container, #contribute .container {
-  border-bottom: 10px dotted #2ec4b6;
-  margin-top: 40px;
+#about .container, #guidelines .container, #contribute .container:nth-child(2), #contribute #files .container {
+  border-block-end: 10px dotted #2ec4b6;
+  margin-block-start: 40px;
 }
 
-@media (min-width: 31em) {
-  #about .container h2, #guidelines .container h2, #contribute .container h2, #contribute .container h3 {
-    background-color: #e9da68;
-    border: 4px dotted #E18f8d;
-    border-radius: 30px;
-    padding: 0.3rem;
-  }
+#contribute {
+  margin-block-start: 40px;
 }
+
+#about .container h2, #guidelines .container h2, #contribute .container h2, #contribute .container h3 {
+  background-color: #e9da68;
+  border: 4px dotted #E18f8d;
+  border-radius: 30px;
+  padding: 0.3rem;
+}
+
 .skip-link {
   background-color: #e9da68;
   border-radius: 50%;
@@ -115,7 +118,7 @@ a {
 }
 
 header {
-  margin-top: 30px;
+  margin-block-start: 30px;
 }
 
 header .container {
@@ -211,8 +214,8 @@ header .container p a {
 }
 nav {
   text-align: center;
-  border-top: 10px dotted #2ec4b6;
-  border-bottom: 10px dotted #2ec4b6;
+  border-block-start: 10px dotted #2ec4b6;
+  border-block-end: 10px dotted #2ec4b6;
   margin: 10px;
 }
 
@@ -257,10 +260,13 @@ nav ul li a:visited {
   border-radius: 30px;
 }
 
-#about .container ul li::before {
-  content: "🐠";
+blockquote p {
+  padding: 0.3rem;
 }
 
+/*#about .container ul li {
+
+}*/
 #about .container ul {
   display: flex;
   flex-wrap: wrap;
@@ -310,11 +316,14 @@ nav ul li a:visited {
     }
   }
   @keyframes crab {
-    from {
+    0% {
       transform: translateX(0);
     }
-    to {
+    50% {
       transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(0);
     }
   }
   #about .container:first-child h2::after {
@@ -324,12 +333,12 @@ nav ul li a:visited {
     width: 100%;
     top: 2%;
     left: -23%;
+    animation: swim 8s linear infinite;
   }
 
-  #about .container:first-child h2:hover::after {
-    animation: swim 5s linear infinite;
-  }
-
+  /*#about .container:first-child h2:hover::after {
+      animation: swim 5s linear infinite;
+  }*/
   #about .container:nth-child(2) h2::before {
     content: "🦀";
     display: inline-block;
@@ -337,12 +346,12 @@ nav ul li a:visited {
     width: 100%;
     top: 2%;
     right: 2%;
+    animation: crab 10s ease-in-out infinite;
   }
 
-  #about .container:nth-child(2) h2:hover::before {
-    animation: crab 10s ease-in-out 1;
-  }
-
+  /*#about .container:nth-child(2) h2:hover::before {
+      animation: crab 10s ease-in-out 1;
+  }*/
   #about .container:first-child {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -396,8 +405,8 @@ nav ul li a:visited {
   #about .container:nth-child(2) ul {
     grid-area: cssList;
     background-color: #2ec4b6;
-    border-radius: 30px;
     border: 5px dotted #e9da68;
+    border-radius: 30px;
     padding: 25px;
   }
 
@@ -408,15 +417,16 @@ nav ul li a:visited {
   #about .container:nth-child(2) p:nth-child(6) {
     grid-area: p4;
   }
-
-  /*@keyframes sub {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-20%); }
-      50% { transform: translateX(5%); }
-      75% { transform: translateX(-10%);}
-      100% { transform: translateX(0); }
-  }*/
 }
+#guidelines .container h3 {
+  font-weight: 500;
+  background: linear-gradient(to right, #2ec4b6, #e9da68, #E18f8d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
 @media (min-width: 31em) {
   #guidelines .container {
     display: grid;
@@ -431,30 +441,39 @@ nav ul li a:visited {
     grid-area: gTitle;
   }
 
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
   #guidelines .container h2::after {
     content: "🐬";
     display: inline-block;
     position: absolute;
     width: 100%;
     top: 2%;
-    left: -28%;
+    left: -25%;
+    animation: spin 8s ease-out infinite;
   }
 
-  #guidelines .container h2:hover::after {
-    animation: swim 5s linear infinite;
-  }
-
+  /*#guidelines .container h2:hover::after {
+      animation: spin 5s linear infinite;
+  }*/
   #guidelines .container p:nth-child(2) {
     grid-area: par1;
   }
 
   #guidelines .container h3 {
     grid-area: tldr;
-    margin-left: 80%;
-    background-color: #2ec4b6;
-    border: 5px dotted #e9da68;
-    border-radius: 30px;
+    margin-inline-start: 80%;
     padding: 0.3rem;
+    font-size: 2.25rem;
   }
 
   #guidelines .container p:nth-child(4) {
@@ -473,7 +492,23 @@ nav ul li a:visited {
     grid-area: linkg;
   }
 }
+ol li::marker {
+  font-family: var(--font-titles);
+  font-size: 6rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #E18f8d, #afeeee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
 ol li {
+  font-family: var(--font-text);
+  background-color: #2ec4b6;
+  border: 5px dotted #e9da68;
+  border-radius: 30px;
+  color: black;
   margin: 10px;
   text-align: left;
 }
@@ -498,13 +533,13 @@ ol li {
     position: absolute;
     width: 100%;
     top: 2%;
-    right: -27%;
+    right: -25%;
+    animation: swim 8s linear infinite;
   }
 
-  #contribute .container:first-child h2:hover::before {
-    animation: swim 5s linear infinite;
-  }
-
+  /*#contribute .container:first-child h2:hover::before {
+      animation: swim 8s linear infinite;
+  }*/
   #contribute .container:first-child p:nth-child(2) {
     grid-area: parag1;
   }
@@ -526,19 +561,39 @@ ol li {
     grid-area: ctitle2;
   }
 
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    5% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(4);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   #contribute .container:nth-child(2) h3::after {
     content: "🐡";
     display: inline-block;
     position: absolute;
     width: 100%;
     top: 2%;
-    left: -25%;
+    left: -22%;
+    animation: scale 10s linear infinite;
   }
 
-  #contribute .container:nth-child(2) h3:hover::after {
-    animation: swim 5s linear infinite;
-  }
-
+  /*#contribute .container:nth-child(2) h3:hover::after {
+      animation: scale 5s linear infinite;
+  }*/
   #contribute .container:nth-child(2) ol {
     grid-area: ol;
   }
@@ -549,8 +604,8 @@ ol li {
 
 .profile {
   background-color: #2ec4b6;
+  border: 5px dotted #e9da68;
   border-radius: 30px;
-  border: 4px dotted #e9da68;
   padding: 0.3rem;
   margin: 10px;
 }
@@ -618,8 +673,8 @@ ol li {
 }
 
 .page-footer .container ul li {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-block-start: 30px;
+  margin-block-end: 30px;
 }
 
 .page-footer .container ul li:first-child {

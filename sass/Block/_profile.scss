@@ -1,8 +1,6 @@
 // profile card in corner
 .profile {
-    background-color: $color-primary;
-    border-radius: $border-radius;
-    border: 4px dotted $color-accent;
+    @include quoteBox;
     padding: $padding;
     
     margin: $margin;
