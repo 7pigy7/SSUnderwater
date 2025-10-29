@@ -78,7 +78,8 @@ ul {
 }
 
 .skip-link:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  border-style: dotted;
+  border-color: #E18f8d;
 }
 
 .link-github svg {
@@ -544,7 +545,17 @@ ol li {
   }
 }
 #files h3 {
-  float: inline-end;
+  order: 4;
+  align-self: flex-start;
+}
+
+#files .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#files .container a {
+  align-self: flex-end;
 }
 
 .profile {
@@ -552,6 +563,7 @@ ol li {
   border-radius: 30px;
   border: 4px dotted #e9da68;
   padding: 0.3rem;
+  text-align: center;
   margin: 10px;
 }
 
@@ -574,6 +586,7 @@ ol li {
 .features {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
   margin: 10px;
 }
 
@@ -581,17 +594,18 @@ ol li {
   border: dotted 5px #e9da68;
   margin: 10px;
   padding: 0.3rem;
+  text-align: center;
 }
 
 .link-allstyles {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media (min-width: 31em) {
   #styles h2 {
-    float: inline-start;
+    display: inline-block;
   }
 }
 .page-footer {
