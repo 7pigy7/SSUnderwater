@@ -1,4 +1,13 @@
 //#files download files
 #files h3{
-    float:inline-end;
+    order: 4;
+    align-self: flex-start;
+}
+#files .container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#files .container a{
+    align-self: flex-end;
 }

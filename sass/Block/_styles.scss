@@ -15,6 +15,7 @@
 .features{
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
     margin: $margin;
 }
 
@@ -22,16 +23,20 @@
     border: dotted 5px $color-accent;
     margin: $margin;
     padding: $padding;
+    text-align: center;
 }
 
 .link-allstyles{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    
 }
+
+
 
 @include breakpoint(computer){
     #styles h2 {
-        float: inline-start;
+        display: inline-block;
     }
 }
