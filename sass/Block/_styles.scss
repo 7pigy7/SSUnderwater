@@ -1,6 +1,6 @@
 //.features and #styles
 
-#styles {  
+#styles {
     padding: $padding;
 }
 
@@ -9,7 +9,7 @@
     border-radius: $border-radius;
     border: 4px dotted $color-secondary;
     margin: $margin;
-    
+    text-align: center;
 }
 
 .features{
@@ -26,11 +26,10 @@
     text-align: center;
 }
 
-.link-allstyles{
+.link-allstyles {
     display: inline-block;
-    margin: 0 auto;
+    @include centered;
     text-align: center;
-    
 }
 
 

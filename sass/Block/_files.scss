@@ -1,13 +1,27 @@
 //#files download files
-#files h3{
-    order: 4;
-    align-self: flex-start;
-}
-#files .container{
-    display: flex;
-    justify-content: space-evenly;
+#files h3 {
+    margin-block-end: 40px;
 }
 
-#files .container a{
-    align-self: flex-end;
+#files .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@include breakpoint(computer) {
+    #files h3 {
+         order: 4;
+         align-self: flex-start;
+    }
+
+    #files .container {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    #files .container a{
+        align-self: flex-end;
+    }
 }

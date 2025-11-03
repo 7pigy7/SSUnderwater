@@ -612,19 +612,31 @@ ol li {
   }
 }
 #files h3 {
-  order: 4;
-  align-self: flex-start;
+  margin-block-end: 40px;
 }
 
 #files .container {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#files .container a {
-  align-self: flex-end;
-}
+@media (min-width: 31em) {
+  #files h3 {
+    order: 4;
+    align-self: flex-start;
+  }
 
+  #files .container {
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  #files .container a {
+    align-self: flex-end;
+  }
+}
 .profile {
   background-color: #2ec4b6;
   border: 5px dotted #e9da68;
@@ -632,6 +644,10 @@ ol li {
   padding: 0.3rem;
   text-align: center;
   margin: 10px;
+}
+
+.profile ul, .profile ul li {
+  padding: 0.3rem;
 }
 
 @media (min-width: 31em) {
@@ -648,6 +664,7 @@ ol li {
   border-radius: 30px;
   border: 4px dotted #E18f8d;
   margin: 10px;
+  text-align: center;
 }
 
 .features {
@@ -666,7 +683,8 @@ ol li {
 
 .link-allstyles {
   display: inline-block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
