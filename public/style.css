@@ -264,21 +264,32 @@ blockquote p {
   padding: 0.3rem;
 }
 
-/*#about .container ul li {
-
-}*/
 #about .container ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" id="largerSub" version="1.1" viewBox="0 0 725.03 236.56"><!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3) --><line x1="16.92" y1="161.83" x2="53.87" y2="161.83" fill="none" stroke="%23e9da68" stroke-miterlimit="10" stroke-width="9"/><path d="M16.92,103.04c-8.62,0-16.92,12.68-16.92,28.92s8.29,29.88,16.92,29.88v-58.79Z" fill="%23e9da68"/><path d="M16.92,220.87c8.62.03,16.77-13.77,16.83-30s-8.13-29.09-16.76-29.12l-.08,59.12Z" fill="%23e9da68"/><path d="M724.13,159.86c-11.03-67.33-147.45-53.98-227.21-67.99,1.63-11.11.35-34.86-14.03-36.25,0,0-39.64,0-39.64,0,2.18-5.37-2.5-11.66-8.33-11.54-27.46-2.14-29.3,10.04-27.92-22.38,0,0,15.8,6.37,15.8,6.37l.05-28.08-22.63,9.15c.13.1-.1,9.05,0,9.41,1.86,38.58-.84,22.27-39.14,25.52-5.82-.11-10.11,6.49-7.92,11.87-43.92,2.57-54.26-14.66-72.45,35.91-69.9,6.92-146.79,6.98-189.72,41.39-9.57,1.14-38.01-5.83-37.13,11.62,1.34,28.56-10.11,51.52,30.96,46.08,6.86,14.93,23.79,28.96,61.19,36.72,57.37,11.91,172.01,5.19,256.19,5.19,121.95,0,338.53,28.5,321.91-73.01Z" fill="%23e9da68"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-origin: border-box;
 }
 
 #about .container ul li {
-  background-color: #e9da68;
-  border-radius: 30px;
-  padding: 0.3rem;
+  /* background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" id="largeSub" version="1.1" viewBox="0 0 267.19 43.6"><!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3) --><g><path d="M9.06,28.09h15.94-15.94Z" fill="none" stroke="%23e9da68" stroke-miterlimit="10" stroke-width="2"/><path d="M9.12,9.68c-.08,0,.02.21-.06.21C4.06,9.89,0,13.85,0,18.73s4.06,8.84,9.06,8.84c.09,0-.08,0,0,0l.06-17.9Z" fill="%23e9da68"/><path d="M9.1,43.12c.08,0,.17.01.25.01,5-.01,8.64-3.83,8.63-8.13s-3.67-7.43-8.67-7.42c-.09,0-.17,0-.25.01l.04,15.53Z" fill="%23e9da68"/></g><path d="M254.06,15l-31,.19c3.91-2.41-1.4-9.47-6.06-9.32,0,0-43.81.13-43.81.13.44-2.64.11-6.02-3.06-5.98,0,0-48.75-.02-48.75-.02-3.15-.04-3.96,3.22-3.5,5.87h-43.81c-4.66-.16-7.97,6.79-4.06,9.19l-26.94-.12c-5.45,0-10.37,3.28-12.06,8.16-8.96-.73-8.95,12.83,0,12.1,1.69,4.88,6.68,8.41,12.12,8.41h211.88c16.85.22,15.93-28.82-.94-28.6Z" fill="%23e9da68"/></svg>');
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: auto;
+   background-origin: border-box;*/
+  padding: 10px;
   margin: 5px;
+  font-weight: 500;
+}
+
+#about ul li::before {
+  content: "🦐";
+  display: inline-block;
 }
 
 @media (min-width: 31em) {
@@ -320,7 +331,7 @@ blockquote p {
       transform: translateX(0);
     }
     50% {
-      transform: translateX(-100vw);
+      transform: translateX(-100%);
     }
     100% {
       transform: translateX(0);
@@ -404,9 +415,6 @@ blockquote p {
 
   #about .container:nth-child(2) ul {
     grid-area: cssList;
-    background-color: #2ec4b6;
-    border: 5px dotted #e9da68;
-    border-radius: 30px;
     padding: 25px;
   }
 
@@ -611,6 +619,7 @@ ol li {
   border: 5px dotted #e9da68;
   border-radius: 30px;
   padding: 0.3rem;
+  text-align: center;
   margin: 10px;
 }
 
