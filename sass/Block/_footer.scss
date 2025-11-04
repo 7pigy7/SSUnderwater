@@ -81,6 +81,10 @@
         grid-area: ul;
     }
 
+    .page-footer ul li a {
+        width: max(5vw, 240px);
+    }
+
     .page-footer .container p:nth-child(3) {
         grid-area: crafted;
     }

@@ -46,10 +46,6 @@ ol li {
         animation: swim 8s linear infinite;
     }
 
-    /*#contribute .container:first-child h2:hover::before {
-        animation: swim 8s linear infinite;
-    }*/
-
     #contribute .container:first-child p:nth-child(2) {
         grid-area: parag1;
     }
@@ -91,10 +87,6 @@ ol li {
         left: -22%;
         animation: scale 10s linear infinite;
     }
-
-    /*#contribute .container:nth-child(2) h3:hover::after {
-        animation: scale 5s linear infinite;
-    }*/
 
     ol {
         grid-area: ol;
