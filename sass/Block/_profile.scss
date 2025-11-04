@@ -3,8 +3,8 @@
     @include quoteBox;
     padding: $padding;
     text-align: center;
-    margin: $margin;
-
+    margin-block-start: $margin-top-bottom;
+    margin-inline: $margin;
 }
 
 .profile ul, .profile ul li {
@@ -15,5 +15,6 @@
 
     .profile{
         float: inline-end;
+        margin-block-start: 120px;
     }
 }

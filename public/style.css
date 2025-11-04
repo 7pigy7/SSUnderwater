@@ -97,7 +97,7 @@ ul {
   color: black;
   text-decoration: none;
   padding: 0.75rem;
-  display: inline-block;
+  display: block;
   margin-bottom: 40px;
 }
 
@@ -611,10 +611,6 @@ ol li {
     font-size: 2.25rem;
   }
 }
-#files h3 {
-  margin-block-end: 40px;
-}
-
 #files .container {
   display: flex;
   flex-direction: column;
@@ -622,19 +618,32 @@ ol li {
   align-items: center;
 }
 
+#files h3 {
+  margin-block-end: 40px;
+}
+
 @media (min-width: 31em) {
-  #files h3 {
-    order: 4;
-    align-self: flex-start;
-  }
-
   #files .container {
+    display: grid;
+    grid-template-columns: "1fr 1fr 1fr 1fr";
+    grid-template-areas: ". . . title" "link1 link2 link3 .";
     justify-content: space-evenly;
-    flex-direction: row;
   }
 
-  #files .container a {
-    align-self: flex-end;
+  #files h3 {
+    grid-area: title;
+  }
+
+  #files .container a:nth-child(2) {
+    grid-area: link1;
+  }
+
+  #files .container a:nth-child(3) {
+    grid-area: link2;
+  }
+
+  #files .container a:nth-child(4) {
+    grid-area: link3;
   }
 }
 .profile {
@@ -643,7 +652,8 @@ ol li {
   border-radius: 30px;
   padding: 0.3rem;
   text-align: center;
-  margin: 10px;
+  margin-block-start: 40px;
+  margin-inline: 10px;
 }
 
 .profile ul, .profile ul li {
@@ -653,6 +663,7 @@ ol li {
 @media (min-width: 31em) {
   .profile {
     float: inline-end;
+    margin-block-start: 120px;
   }
 }
 #styles {
@@ -663,7 +674,7 @@ ol li {
   background-color: #e9da68;
   border-radius: 30px;
   border: 4px dotted #E18f8d;
-  margin: 10px;
+  margin-block-start: 40px;
   text-align: center;
 }
 
@@ -672,20 +683,21 @@ ol li {
   justify-content: space-evenly;
   flex-direction: column;
   margin: 10px;
+  align-items: center;
 }
 
 .features li {
   border: dotted 5px #e9da68;
   margin: 10px;
-  padding: 0.3rem;
+  padding: 10px;
   text-align: center;
+  width: min(50vw, 900px);
 }
 
-.link-allstyles {
-  display: inline-block;
+#styles .link-allstyles {
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  width: max(5vw, 300px);
 }
 
 @media (min-width: 31em) {
