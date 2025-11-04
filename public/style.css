@@ -605,9 +605,8 @@ ol li {
 @media (min-width: 31em) {
   #files .container {
     display: grid;
-    grid-template-columns: "1fr 1fr 1fr 1fr";
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: ". . . title" "link1 link2 link3 .";
-    justify-content: space-evenly;
   }
 
   #files h3 {
@@ -624,6 +623,10 @@ ol li {
 
   #files .container a:nth-child(4) {
     grid-area: link3;
+  }
+
+  #files .container a {
+    width: max(5vw, 200px);
   }
 }
 .profile {
