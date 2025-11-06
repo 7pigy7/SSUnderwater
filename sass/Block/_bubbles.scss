@@ -9,6 +9,16 @@
    Only visible on desktop view (hidden on mobile).
    ============================================ */
 
+   /* Notes from Shauntal - I think it will be a bit tricky to add bubbles this way
+   because you can't create a class for them. They will need to be added via using ::before or ::after.
+   I know that is not ideal and not what we usually do, it would be so nice if we could just change the HTML
+   but that would go against the assignment, and we don't want to lose marks. I would suggest using the
+   .page-footer for your parent folder and the .container as your child. That is the footer at the bottom of the
+   web site. This way you can add the bubbles at the bottom and have them still rise to the top, if you still want
+   to do that. If not, I understand!!!! Just adding a few under each title and having the static would be awesome
+   as well. However, I would suggest NOT using the h1 for the ::before and ::after because I have already used those
+   to add the little sea animals.*/
+
 .bubbles {
   position: fixed;           // Keeps bubbles always visible
   inset: 0;                  // Full viewport coverage

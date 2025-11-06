@@ -164,10 +164,12 @@ header .container p a {
   header {
     position: relative;
   }
+
   header .container {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "title title title" "link secTitle creator";
   }
+
   header .container h1::before {
     content: "🐳";
     display: inline-block;
@@ -177,6 +179,7 @@ header .container p a {
     top: 2%;
     left: 2%;
   }
+
   header .container h1::after {
     content: "🦈";
     display: inline-block;
@@ -186,21 +189,26 @@ header .container p a {
     top: 2%;
     right: 2%;
   }
+
   header .container h1 {
     font-size: 6rem;
     padding: 30px;
     max-width: 100%;
   }
+
   header .container h2 {
     font-size: 2.25rem;
   }
+
   header .container p {
     align-self: center;
     justify-self: center;
   }
+
   header .container a {
     justify-self: center;
   }
+
   header .container p a {
     font-size: 1.15rem;
   }
@@ -284,6 +292,7 @@ blockquote p {
   #about .container {
     position: relative;
   }
+
   @keyframes swim {
     0% {
       transform: translate(0, 0);
@@ -333,6 +342,7 @@ blockquote p {
     left: -23%;
     animation: swim 8s linear infinite;
   }
+
   #about .container:nth-child(2) h2::before {
     content: "🦀";
     display: inline-block;
@@ -342,6 +352,7 @@ blockquote p {
     right: 2%;
     animation: crab 10s ease-in-out infinite;
   }
+
   #about .container:first-child {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -350,21 +361,27 @@ blockquote p {
     align-items: center;
     column-gap: 10px;
   }
+
   #about .container:first-child h2 {
     grid-area: title;
   }
+
   #about .container:first-child p:nth-child(2) {
     grid-area: para1;
   }
+
   #about .container:first-child p:nth-child(3) {
     grid-area: para2;
   }
+
   #about .container:first-child blockquote {
     grid-area: quote;
   }
+
   #about .container:first-child p:nth-child(5) {
     grid-area: para3;
   }
+
   #about .container:nth-child(2) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -373,22 +390,28 @@ blockquote p {
     align-items: center;
     column-gap: 10px;
   }
+
   #about .container:nth-child(2) h2 {
     grid-area: title2;
   }
+
   #about .container:nth-child(2) p:nth-child(2) {
     grid-area: p1;
   }
+
   #about .container:nth-child(2) p:nth-child(3) {
     grid-area: p2;
   }
+
   #about .container:nth-child(2) ul {
     grid-area: cssList;
     padding: 25px;
   }
+
   #about .container:nth-child(2) p:nth-child(5) {
     grid-area: p3;
   }
+
   #about .container:nth-child(2) p:nth-child(6) {
     grid-area: p4;
   }
@@ -411,9 +434,11 @@ blockquote p {
     grid-template-areas: "gTitle ." ". par1" "tldr ." ". par2" ". par3" "linkg par4";
     position: relative;
   }
+
   #guidelines .container h2 {
     grid-area: gTitle;
   }
+
   @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -434,24 +459,30 @@ blockquote p {
     left: -25%;
     animation: spin 8s ease-out infinite;
   }
+
   #guidelines .container p:nth-child(2) {
     grid-area: par1;
   }
+
   #guidelines .container h3 {
     grid-area: tldr;
     margin-inline-start: 80%;
     padding: 0.3rem;
     font-size: 2.25rem;
   }
+
   #guidelines .container p:nth-child(4) {
     grid-area: par2;
   }
+
   #guidelines .container p:nth-child(5) {
     grid-area: par3;
   }
+
   #guidelines .container p:nth-child(6) {
     grid-area: par4;
   }
+
   .link-guidelines {
     grid-area: linkg;
   }
@@ -486,9 +517,11 @@ ol li {
     grid-template-areas: ". ctitle1" "parag1 ." "parag2 .";
     position: relative;
   }
+
   #contribute .container:first-child h2 {
     grid-area: ctitle1;
   }
+
   #contribute .container:first-child h2::before {
     content: "🦑";
     display: inline-block;
@@ -498,12 +531,15 @@ ol li {
     right: -25%;
     animation: swim 8s linear infinite;
   }
+
   #contribute .container:first-child p:nth-child(2) {
     grid-area: parag1;
   }
+
   #contribute .container:first-child p:nth-child(3) {
     grid-area: parag2;
   }
+
   #contribute .container:nth-child(2) {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -512,9 +548,11 @@ ol li {
     grid-template-areas: "ctitle2 ." ". ol";
     position: relative;
   }
+
   #contribute .container:nth-child(2) h3 {
     grid-area: ctitle2;
   }
+
   @keyframes scale {
     0% {
       transform: scale(1);
@@ -544,9 +582,11 @@ ol li {
     left: -22%;
     animation: scale 10s linear infinite;
   }
+
   ol {
     grid-area: ol;
   }
+
   ol li::marker {
     font-size: 2.25rem;
   }
@@ -581,9 +621,11 @@ ol li {
     grid-template-areas: ". ctitle1" "parag1 ." "parag2 .";
     position: relative;
   }
+
   #contribute .container:first-child h2 {
     grid-area: ctitle1;
   }
+
   #contribute .container:first-child h2::before {
     content: "🦑";
     display: inline-block;
@@ -593,12 +635,15 @@ ol li {
     right: -25%;
     animation: swim 8s linear infinite;
   }
+
   #contribute .container:first-child p:nth-child(2) {
     grid-area: parag1;
   }
+
   #contribute .container:first-child p:nth-child(3) {
     grid-area: parag2;
   }
+
   #contribute .container:nth-child(2) {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -607,9 +652,11 @@ ol li {
     grid-template-areas: "ctitle2 ." ". ol";
     position: relative;
   }
+
   #contribute .container:nth-child(2) h3 {
     grid-area: ctitle2;
   }
+
   @keyframes scale {
     0% {
       transform: scale(1);
@@ -639,9 +686,11 @@ ol li {
     left: -22%;
     animation: scale 10s linear infinite;
   }
+
   ol {
     grid-area: ol;
   }
+
   ol li::marker {
     font-size: 2.25rem;
   }
@@ -656,6 +705,15 @@ ol li {
    underwater air bubbles.
    Only visible on desktop view (hidden on mobile).
    ============================================ */
+/* Notes from Shauntal - I think it will be a bit tricky to add bubbles this way
+because you can't create a class for them. They will need to be added via using ::before or ::after.
+I know that is not ideal and not what we usually do, it would be so nice if we could just change the HTML
+but that would go against the assignment, and we don't want to lose marks. I would suggest using the
+.page-footer for your parent folder and the .container as your child. That is the footer at the bottom of the
+web site. This way you can add the bubbles at the bottom and have them still rise to the top, if you still want
+to do that. If not, I understand!!!! Just adding a few under each title and having the static would be awesome
+as well. However, I would suggest NOT using the h1 for the ::before and ::after because I have already used those
+to add the little sea animals.*/
 .bubbles {
   position: fixed;
   inset: 0;
@@ -667,13 +725,13 @@ ol li {
   position: absolute;
   bottom: -120px;
   left: calc(2% * var(--i));
-  width: calc(10px + var(--i) * 0.6px);
-  height: calc(10px + var(--i) * 0.6px);
+  width: calc(10px + (var(--i) * 0.6px));
+  height: calc(10px + (var(--i) * 0.6px));
   border-radius: 50%;
   opacity: 0.7;
   background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(173, 216, 230, 0.25));
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-  animation: rise calc(5s + var(--i) * 0.4s) linear infinite;
+  animation: rise calc(5s + (var(--i) * 0.4s)) linear infinite;
 }
 .bubbles .bubble:nth-child(odd) {
   animation-delay: calc(var(--i) * -0.2s);
@@ -734,18 +792,23 @@ ol li {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: ". . . title" "link1 link2 link3 .";
   }
+
   #files h3 {
     grid-area: title;
   }
+
   #files .container a:nth-child(2) {
     grid-area: link1;
   }
+
   #files .container a:nth-child(3) {
     grid-area: link2;
   }
+
   #files .container a:nth-child(4) {
     grid-area: link3;
   }
+
   #files .container a {
     width: max(5vw, 200px);
   }
@@ -767,18 +830,23 @@ ol li {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: ". . . title" "link1 link2 link3 .";
   }
+
   #files h3 {
     grid-area: title;
   }
+
   #files .container a:nth-child(2) {
     grid-area: link1;
   }
+
   #files .container a:nth-child(3) {
     grid-area: link2;
   }
+
   #files .container a:nth-child(4) {
     grid-area: link3;
   }
+
   #files .container a {
     width: max(5vw, 200px);
   }
@@ -907,21 +975,27 @@ ol li {
     grid-template-columns: 2fr 1fr;
     grid-template-areas: " created ul" " crafted ul" " contri ul";
   }
+
   .page-footer .container p:first-child {
     grid-area: created;
   }
+
   .page-footer .container ul {
     grid-area: ul;
   }
+
   .page-footer ul li a {
     width: max(5vw, 240px);
   }
+
   .page-footer .container p:nth-child(3) {
     grid-area: crafted;
   }
+
   .page-footer .container p:nth-child(4) {
     grid-area: contri;
   }
+
   .page-footer .container ul li:nth-child(4), .page-footer .container ul li:first-child, .page-footer .container ul li:nth-child(2) {
     font-size: 1.15rem;
   }
@@ -970,5 +1044,3 @@ img {
     scroll-behavior: auto !important;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
